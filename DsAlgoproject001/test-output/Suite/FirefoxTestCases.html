@@ -1,0 +1,723 @@
+<html>
+<head>
+<title>TestNG:  FirefoxTestCases</title>
+<link href="../testng.css" rel="stylesheet" type="text/css" />
+<link href="../my-testng.css" rel="stylesheet" type="text/css" />
+
+<style type="text/css">
+.log { display: none;} 
+.stack-trace { display: none;} 
+</style>
+<script type="text/javascript">
+<!--
+function flip(e) {
+  current = e.style.display;
+  if (current == 'block') {
+    e.style.display = 'none';
+    return 0;
+  }
+  else {
+    e.style.display = 'block';
+    return 1;
+  }
+}
+
+function toggleBox(szDivId, elem, msg1, msg2)
+{
+  var res = -1;  if (document.getElementById) {
+    res = flip(document.getElementById(szDivId));
+  }
+  else if (document.all) {
+    // this is the way old msie versions work
+    res = flip(document.all[szDivId]);
+  }
+  if(elem) {
+    if(res == 0) elem.innerHTML = msg1; else elem.innerHTML = msg2;
+  }
+
+}
+
+function toggleAllBoxes() {
+  if (document.getElementsByTagName) {
+    d = document.getElementsByTagName('div');
+    for (i = 0; i < d.length; i++) {
+      if (d[i].className == 'log') {
+        flip(d[i]);
+      }
+    }
+  }
+}
+
+// -->
+</script>
+
+</head>
+<body>
+<h2 align='center'>FirefoxTestCases</h2><table border='1' align="center">
+<tr>
+<td>Tests passed/Failed/Skipped:</td><td>29/9/0</td>
+</tr><tr>
+<td>Started on:</td><td>Tue Dec 05 00:44:41 EST 2023</td>
+</tr>
+<tr><td>Total time:</td><td>55 seconds (55994 ms)</td>
+</tr><tr>
+<td>Included groups:</td><td></td>
+</tr><tr>
+<td>Excluded groups:</td><td></td>
+</tr>
+</table><p/>
+<small><i>(Hover the method name to see the test class name)</i></small><p/>
+<table width='100%' border='1' class='invocation-failed'>
+<tr><td colspan='4' align='center'><b>FAILED TESTS</b></td></tr>
+<tr><td><b>Test method</b></td>
+<td><b>Attribute(s)</b></td>
+<td width="30%"><b>Exception</b></td>
+<td width="10%"><b>Time (seconds)</b></td>
+<td><b>Instance</b></td>
+</tr>
+<tr>
+<td title='runner.TestRunner.runScenario()'><b>runScenario</b><br>Test class: runner.TestRunner<br>Test method: Runs Cucumber Scenarios<br>Parameters: "Arrays on Python page", "Array feature"</td>
+<td><div><pre>org.openqa.selenium.NoSuchElementException: Unable to locate element: /html/body/div[2]/ul[1]/a
+For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors#no-such-element-exception
+Build info: version: &apos;4.15.0&apos;, revision: &apos;1d14b5521b&apos;
+System info: os.name: &apos;Windows 11&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;17.0.9&apos;
+Driver info: org.openqa.selenium.firefox.FirefoxDriver
+Command: [0ebf21c0-3237-4554-9d72-2eec97e9869f, findElement {using=xpath, value=/html/body/div[2]/ul[1]/a}]
+Capabilities {acceptInsecureCerts: true, browserName: firefox, browserVersion: 120.0.1, moz:accessibilityChecks: false, moz:buildID: 20231129155202, moz:debuggerAddress: 127.0.0.1:12855, moz:geckodriverVersion: 0.33.0, moz:headless: false, moz:platformVersion: 10.0, moz:processID: 12956, moz:profile: C:\Users\azam_\AppData\Loca..., moz:shutdownTimeout: 60000, moz:webdriverClick: true, moz:windowless: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://127.0.0.1:12855/devtoo..., se:cdpVersion: 85.0, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify}
+Session ID: 0ebf21c0-3237-4554-9d72-2eec97e9869f
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.createException(W3CHttpResponseCodec.java:200)
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:133)
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:52)
+	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:191)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.invokeExecute(DriverCommandExecutor.java:200)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:175)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:607)
+	at org.openqa.selenium.remote.ElementLocation$ElementFinder$2.findElement(ElementLocation.java:165)
+	at org.openqa.selenium.remote.ElementLocation.findElement(ElementLocation.java:59)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:364)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:358)
+	at pageObjects.ArrayPage.arrays_on_python_link(ArrayPage.java:83)
+	at stepDefinitions.ArraySteps.the_user_clicks_arrays_in_python_link(ArraySteps.java:28)
+	at ✽.The user clicks Arrays in Python link(file:///C:/mizba/BitBuddies_DsAlgo/src/test/resources/features/05Array.feature:19)
+... Removed 5 stack frames</pre></div><a href='#' onClick='toggleBox("stack-trace1804911104", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace1804911104'><pre>org.openqa.selenium.NoSuchElementException: Unable to locate element: /html/body/div[2]/ul[1]/a
+For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors#no-such-element-exception
+Build info: version: &apos;4.15.0&apos;, revision: &apos;1d14b5521b&apos;
+System info: os.name: &apos;Windows 11&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;17.0.9&apos;
+Driver info: org.openqa.selenium.firefox.FirefoxDriver
+Command: [0ebf21c0-3237-4554-9d72-2eec97e9869f, findElement {using=xpath, value=/html/body/div[2]/ul[1]/a}]
+Capabilities {acceptInsecureCerts: true, browserName: firefox, browserVersion: 120.0.1, moz:accessibilityChecks: false, moz:buildID: 20231129155202, moz:debuggerAddress: 127.0.0.1:12855, moz:geckodriverVersion: 0.33.0, moz:headless: false, moz:platformVersion: 10.0, moz:processID: 12956, moz:profile: C:\Users\azam_\AppData\Loca..., moz:shutdownTimeout: 60000, moz:webdriverClick: true, moz:windowless: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://127.0.0.1:12855/devtoo..., se:cdpVersion: 85.0, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify}
+Session ID: 0ebf21c0-3237-4554-9d72-2eec97e9869f
+	at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
+	at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:77)
+	at java.base/jdk.internal.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
+	at java.base/java.lang.reflect.Constructor.newInstanceWithCaller(Constructor.java:499)
+	at java.base/java.lang.reflect.Constructor.newInstance(Constructor.java:480)
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.createException(W3CHttpResponseCodec.java:200)
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:133)
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:52)
+	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:191)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.invokeExecute(DriverCommandExecutor.java:200)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:175)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:607)
+	at org.openqa.selenium.remote.ElementLocation$ElementFinder$2.findElement(ElementLocation.java:165)
+	at org.openqa.selenium.remote.ElementLocation.findElement(ElementLocation.java:59)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:364)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:358)
+	at pageObjects.ArrayPage.arrays_on_python_link(ArrayPage.java:83)
+	at stepDefinitions.ArraySteps.the_user_clicks_arrays_in_python_link(ArraySteps.java:28)
+	at ✽.The user clicks Arrays in Python link(file:///C:/mizba/BitBuddies_DsAlgo/src/test/resources/features/05Array.feature:19)
+</pre></div></td>
+<td>3</td>
+<td>runner.TestRunner@38604b81</td></tr>
+<tr>
+<td title='runner.TestRunner.runScenario()'><b>runScenario</b><br>Test class: runner.TestRunner<br>Test method: Runs Cucumber Scenarios<br>Parameters: "Applications of Array", "Array feature"</td>
+<td><div><pre>org.openqa.selenium.NoSuchElementException: Unable to locate element: //*[@id=&quot;content&quot;]/li[4]/a
+For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors#no-such-element-exception
+Build info: version: &apos;4.15.0&apos;, revision: &apos;1d14b5521b&apos;
+System info: os.name: &apos;Windows 11&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;17.0.9&apos;
+Driver info: org.openqa.selenium.firefox.FirefoxDriver
+Command: [0ebf21c0-3237-4554-9d72-2eec97e9869f, findElement {using=xpath, value=//*[@id=&quot;content&quot;]/li[4]/a}]
+Capabilities {acceptInsecureCerts: true, browserName: firefox, browserVersion: 120.0.1, moz:accessibilityChecks: false, moz:buildID: 20231129155202, moz:debuggerAddress: 127.0.0.1:12855, moz:geckodriverVersion: 0.33.0, moz:headless: false, moz:platformVersion: 10.0, moz:processID: 12956, moz:profile: C:\Users\azam_\AppData\Loca..., moz:shutdownTimeout: 60000, moz:webdriverClick: true, moz:windowless: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://127.0.0.1:12855/devtoo..., se:cdpVersion: 85.0, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify}
+Session ID: 0ebf21c0-3237-4554-9d72-2eec97e9869f
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.createException(W3CHttpResponseCodec.java:200)
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:133)
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:52)
+	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:191)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.invokeExecute(DriverCommandExecutor.java:200)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:175)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:607)
+	at org.openqa.selenium.remote.ElementLocation$ElementFinder$2.findElement(ElementLocation.java:165)
+	at org.openqa.selenium.remote.ElementLocation.findElement(ElementLocation.java:59)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:364)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:358)
+	at pageObjects.ArrayPage.applications_of_array(ArrayPage.java:172)
+	at stepDefinitions.ArraySteps.the_user_clicks_on_applications_of_array_link(ArraySteps.java:82)
+	at ✽.The user clicks on Applications of Array link(file:///C:/mizba/BitBuddies_DsAlgo/src/test/resources/features/05Array.feature:61)
+... Removed 5 stack frames</pre></div><a href='#' onClick='toggleBox("stack-trace1574053815", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace1574053815'><pre>org.openqa.selenium.NoSuchElementException: Unable to locate element: //*[@id=&quot;content&quot;]/li[4]/a
+For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors#no-such-element-exception
+Build info: version: &apos;4.15.0&apos;, revision: &apos;1d14b5521b&apos;
+System info: os.name: &apos;Windows 11&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;17.0.9&apos;
+Driver info: org.openqa.selenium.firefox.FirefoxDriver
+Command: [0ebf21c0-3237-4554-9d72-2eec97e9869f, findElement {using=xpath, value=//*[@id=&quot;content&quot;]/li[4]/a}]
+Capabilities {acceptInsecureCerts: true, browserName: firefox, browserVersion: 120.0.1, moz:accessibilityChecks: false, moz:buildID: 20231129155202, moz:debuggerAddress: 127.0.0.1:12855, moz:geckodriverVersion: 0.33.0, moz:headless: false, moz:platformVersion: 10.0, moz:processID: 12956, moz:profile: C:\Users\azam_\AppData\Loca..., moz:shutdownTimeout: 60000, moz:webdriverClick: true, moz:windowless: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://127.0.0.1:12855/devtoo..., se:cdpVersion: 85.0, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify}
+Session ID: 0ebf21c0-3237-4554-9d72-2eec97e9869f
+	at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
+	at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:77)
+	at java.base/jdk.internal.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
+	at java.base/java.lang.reflect.Constructor.newInstanceWithCaller(Constructor.java:499)
+	at java.base/java.lang.reflect.Constructor.newInstance(Constructor.java:480)
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.createException(W3CHttpResponseCodec.java:200)
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:133)
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:52)
+	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:191)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.invokeExecute(DriverCommandExecutor.java:200)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:175)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:607)
+	at org.openqa.selenium.remote.ElementLocation$ElementFinder$2.findElement(ElementLocation.java:165)
+	at org.openqa.selenium.remote.ElementLocation.findElement(ElementLocation.java:59)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:364)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:358)
+	at pageObjects.ArrayPage.applications_of_array(ArrayPage.java:172)
+	at stepDefinitions.ArraySteps.the_user_clicks_on_applications_of_array_link(ArraySteps.java:82)
+	at ✽.The user clicks on Applications of Array link(file:///C:/mizba/BitBuddies_DsAlgo/src/test/resources/features/05Array.feature:61)
+</pre></div></td>
+<td>3</td>
+<td>runner.TestRunner@38604b81</td></tr>
+<tr>
+<td title='runner.TestRunner.runScenario()'><b>runScenario</b><br>Test class: runner.TestRunner<br>Test method: Runs Cucumber Scenarios<br>Parameters: "user is in data structure intro page", "Testing data structure Module"</td>
+<td><div><pre>org.openqa.selenium.NoSuchElementException: Unable to locate element: //*[@id=&quot;content&quot;]/a
+For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors#no-such-element-exception
+Build info: version: &apos;4.15.0&apos;, revision: &apos;1d14b5521b&apos;
+System info: os.name: &apos;Windows 11&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;17.0.9&apos;
+Driver info: org.openqa.selenium.firefox.FirefoxDriver
+Command: [0ebf21c0-3237-4554-9d72-2eec97e9869f, findElement {using=xpath, value=//*[@id=&quot;content&quot;]/a}]
+Capabilities {acceptInsecureCerts: true, browserName: firefox, browserVersion: 120.0.1, moz:accessibilityChecks: false, moz:buildID: 20231129155202, moz:debuggerAddress: 127.0.0.1:12855, moz:geckodriverVersion: 0.33.0, moz:headless: false, moz:platformVersion: 10.0, moz:processID: 12956, moz:profile: C:\Users\azam_\AppData\Loca..., moz:shutdownTimeout: 60000, moz:webdriverClick: true, moz:windowless: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://127.0.0.1:12855/devtoo..., se:cdpVersion: 85.0, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify}
+Session ID: 0ebf21c0-3237-4554-9d72-2eec97e9869f
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.createException(W3CHttpResponseCodec.java:200)
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:133)
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:52)
+	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:191)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.invokeExecute(DriverCommandExecutor.java:200)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:175)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:607)
+	at org.openqa.selenium.remote.ElementLocation$ElementFinder$2.findElement(ElementLocation.java:165)
+	at org.openqa.selenium.remote.ElementLocation.findElement(ElementLocation.java:59)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:364)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:358)
+	at pageObjects.DataStrucPage.click_practiceques(DataStrucPage.java:134)
+	at stepDefinitions.DataStructureSteps.user_clicks_the_practice_questions_button(DataStructureSteps.java:98)
+	at ✽.user clicks the Practice Questions button(file:///C:/mizba/BitBuddies_DsAlgo/src/test/resources/features/04Datastructure.feature:23)
+... Removed 5 stack frames</pre></div><a href='#' onClick='toggleBox("stack-trace483012253", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace483012253'><pre>org.openqa.selenium.NoSuchElementException: Unable to locate element: //*[@id=&quot;content&quot;]/a
+For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors#no-such-element-exception
+Build info: version: &apos;4.15.0&apos;, revision: &apos;1d14b5521b&apos;
+System info: os.name: &apos;Windows 11&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;17.0.9&apos;
+Driver info: org.openqa.selenium.firefox.FirefoxDriver
+Command: [0ebf21c0-3237-4554-9d72-2eec97e9869f, findElement {using=xpath, value=//*[@id=&quot;content&quot;]/a}]
+Capabilities {acceptInsecureCerts: true, browserName: firefox, browserVersion: 120.0.1, moz:accessibilityChecks: false, moz:buildID: 20231129155202, moz:debuggerAddress: 127.0.0.1:12855, moz:geckodriverVersion: 0.33.0, moz:headless: false, moz:platformVersion: 10.0, moz:processID: 12956, moz:profile: C:\Users\azam_\AppData\Loca..., moz:shutdownTimeout: 60000, moz:webdriverClick: true, moz:windowless: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://127.0.0.1:12855/devtoo..., se:cdpVersion: 85.0, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify}
+Session ID: 0ebf21c0-3237-4554-9d72-2eec97e9869f
+	at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
+	at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:77)
+	at java.base/jdk.internal.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
+	at java.base/java.lang.reflect.Constructor.newInstanceWithCaller(Constructor.java:499)
+	at java.base/java.lang.reflect.Constructor.newInstance(Constructor.java:480)
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.createException(W3CHttpResponseCodec.java:200)
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:133)
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:52)
+	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:191)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.invokeExecute(DriverCommandExecutor.java:200)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:175)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:607)
+	at org.openqa.selenium.remote.ElementLocation$ElementFinder$2.findElement(ElementLocation.java:165)
+	at org.openqa.selenium.remote.ElementLocation.findElement(ElementLocation.java:59)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:364)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:358)
+	at pageObjects.DataStrucPage.click_practiceques(DataStrucPage.java:134)
+	at stepDefinitions.DataStructureSteps.user_clicks_the_practice_questions_button(DataStructureSteps.java:98)
+	at ✽.user clicks the Practice Questions button(file:///C:/mizba/BitBuddies_DsAlgo/src/test/resources/features/04Datastructure.feature:23)
+</pre></div></td>
+<td>3</td>
+<td>runner.TestRunner@38604b81</td></tr>
+<tr>
+<td title='runner.TestRunner.runScenario()'><b>runScenario</b><br>Test class: runner.TestRunner<br>Test method: Runs Cucumber Scenarios<br>Parameters: "Select array DS with Get Started button or select array from dropdown", "Array feature"</td>
+<td><div><pre>org.openqa.selenium.NoSuchElementException: Unable to locate element: //*[@id=&quot;navbarCollapse&quot;]/div[1]/div/a
+For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors#no-such-element-exception
+Build info: version: &apos;4.15.0&apos;, revision: &apos;1d14b5521b&apos;
+System info: os.name: &apos;Windows 11&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;17.0.9&apos;
+Driver info: org.openqa.selenium.firefox.FirefoxDriver
+Command: [0ebf21c0-3237-4554-9d72-2eec97e9869f, findElement {using=xpath, value=//*[@id=&quot;navbarCollapse&quot;]/div[1]/div/a}]
+Capabilities {acceptInsecureCerts: true, browserName: firefox, browserVersion: 120.0.1, moz:accessibilityChecks: false, moz:buildID: 20231129155202, moz:debuggerAddress: 127.0.0.1:12855, moz:geckodriverVersion: 0.33.0, moz:headless: false, moz:platformVersion: 10.0, moz:processID: 12956, moz:profile: C:\Users\azam_\AppData\Loca..., moz:shutdownTimeout: 60000, moz:webdriverClick: true, moz:windowless: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://127.0.0.1:12855/devtoo..., se:cdpVersion: 85.0, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify}
+Session ID: 0ebf21c0-3237-4554-9d72-2eec97e9869f
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.createException(W3CHttpResponseCodec.java:200)
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:133)
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:52)
+	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:191)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.invokeExecute(DriverCommandExecutor.java:200)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:175)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:607)
+	at org.openqa.selenium.remote.ElementLocation$ElementFinder$2.findElement(ElementLocation.java:165)
+	at org.openqa.selenium.remote.ElementLocation.findElement(ElementLocation.java:59)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:364)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:358)
+	at pageObjects.ArrayPage.dropdown_array(ArrayPage.java:55)
+	at stepDefinitions.ArraySteps.user_clicks_on_the_button_in_array_pane_or_select_array_item_from_drop_down_menu(ArraySteps.java:13)
+	at ✽.user clicks on the &quot;Get Started&quot; button in Array pane or select Array item from drop down menu(file:///C:/mizba/BitBuddies_DsAlgo/src/test/resources/features/05Array.feature:13)
+... Removed 5 stack frames</pre></div><a href='#' onClick='toggleBox("stack-trace1397558522", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace1397558522'><pre>org.openqa.selenium.NoSuchElementException: Unable to locate element: //*[@id=&quot;navbarCollapse&quot;]/div[1]/div/a
+For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors#no-such-element-exception
+Build info: version: &apos;4.15.0&apos;, revision: &apos;1d14b5521b&apos;
+System info: os.name: &apos;Windows 11&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;17.0.9&apos;
+Driver info: org.openqa.selenium.firefox.FirefoxDriver
+Command: [0ebf21c0-3237-4554-9d72-2eec97e9869f, findElement {using=xpath, value=//*[@id=&quot;navbarCollapse&quot;]/div[1]/div/a}]
+Capabilities {acceptInsecureCerts: true, browserName: firefox, browserVersion: 120.0.1, moz:accessibilityChecks: false, moz:buildID: 20231129155202, moz:debuggerAddress: 127.0.0.1:12855, moz:geckodriverVersion: 0.33.0, moz:headless: false, moz:platformVersion: 10.0, moz:processID: 12956, moz:profile: C:\Users\azam_\AppData\Loca..., moz:shutdownTimeout: 60000, moz:webdriverClick: true, moz:windowless: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://127.0.0.1:12855/devtoo..., se:cdpVersion: 85.0, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify}
+Session ID: 0ebf21c0-3237-4554-9d72-2eec97e9869f
+	at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
+	at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:77)
+	at java.base/jdk.internal.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
+	at java.base/java.lang.reflect.Constructor.newInstanceWithCaller(Constructor.java:499)
+	at java.base/java.lang.reflect.Constructor.newInstance(Constructor.java:480)
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.createException(W3CHttpResponseCodec.java:200)
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:133)
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:52)
+	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:191)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.invokeExecute(DriverCommandExecutor.java:200)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:175)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:607)
+	at org.openqa.selenium.remote.ElementLocation$ElementFinder$2.findElement(ElementLocation.java:165)
+	at org.openqa.selenium.remote.ElementLocation.findElement(ElementLocation.java:59)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:364)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:358)
+	at pageObjects.ArrayPage.dropdown_array(ArrayPage.java:55)
+	at stepDefinitions.ArraySteps.user_clicks_on_the_button_in_array_pane_or_select_array_item_from_drop_down_menu(ArraySteps.java:13)
+	at ✽.user clicks on the &quot;Get Started&quot; button in Array pane or select Array item from drop down menu(file:///C:/mizba/BitBuddies_DsAlgo/src/test/resources/features/05Array.feature:13)
+</pre></div></td>
+<td>3</td>
+<td>runner.TestRunner@38604b81</td></tr>
+<tr>
+<td title='runner.TestRunner.runScenario()'><b>runScenario</b><br>Test class: runner.TestRunner<br>Test method: Runs Cucumber Scenarios<br>Parameters: "Arrays Using List", "Array feature"</td>
+<td><div><pre>org.openqa.selenium.NoSuchElementException: Unable to locate element: //*[@id=&quot;content&quot;]/li[2]/a
+For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors#no-such-element-exception
+Build info: version: &apos;4.15.0&apos;, revision: &apos;1d14b5521b&apos;
+System info: os.name: &apos;Windows 11&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;17.0.9&apos;
+Driver info: org.openqa.selenium.firefox.FirefoxDriver
+Command: [0ebf21c0-3237-4554-9d72-2eec97e9869f, findElement {using=xpath, value=//*[@id=&quot;content&quot;]/li[2]/a}]
+Capabilities {acceptInsecureCerts: true, browserName: firefox, browserVersion: 120.0.1, moz:accessibilityChecks: false, moz:buildID: 20231129155202, moz:debuggerAddress: 127.0.0.1:12855, moz:geckodriverVersion: 0.33.0, moz:headless: false, moz:platformVersion: 10.0, moz:processID: 12956, moz:profile: C:\Users\azam_\AppData\Loca..., moz:shutdownTimeout: 60000, moz:webdriverClick: true, moz:windowless: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://127.0.0.1:12855/devtoo..., se:cdpVersion: 85.0, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify}
+Session ID: 0ebf21c0-3237-4554-9d72-2eec97e9869f
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.createException(W3CHttpResponseCodec.java:200)
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:133)
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:52)
+	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:191)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.invokeExecute(DriverCommandExecutor.java:200)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:175)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:607)
+	at org.openqa.selenium.remote.ElementLocation$ElementFinder$2.findElement(ElementLocation.java:165)
+	at org.openqa.selenium.remote.ElementLocation.findElement(ElementLocation.java:59)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:364)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:358)
+	at pageObjects.ArrayPage.arrays_using_list(ArrayPage.java:160)
+	at stepDefinitions.ArraySteps.the_user_clicks_on_arrays_using_list_link(ArraySteps.java:45)
+	at ✽.The user clicks on Arrays Using List link(file:///C:/mizba/BitBuddies_DsAlgo/src/test/resources/features/05Array.feature:33)
+... Removed 5 stack frames</pre></div><a href='#' onClick='toggleBox("stack-trace1734719138", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace1734719138'><pre>org.openqa.selenium.NoSuchElementException: Unable to locate element: //*[@id=&quot;content&quot;]/li[2]/a
+For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors#no-such-element-exception
+Build info: version: &apos;4.15.0&apos;, revision: &apos;1d14b5521b&apos;
+System info: os.name: &apos;Windows 11&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;17.0.9&apos;
+Driver info: org.openqa.selenium.firefox.FirefoxDriver
+Command: [0ebf21c0-3237-4554-9d72-2eec97e9869f, findElement {using=xpath, value=//*[@id=&quot;content&quot;]/li[2]/a}]
+Capabilities {acceptInsecureCerts: true, browserName: firefox, browserVersion: 120.0.1, moz:accessibilityChecks: false, moz:buildID: 20231129155202, moz:debuggerAddress: 127.0.0.1:12855, moz:geckodriverVersion: 0.33.0, moz:headless: false, moz:platformVersion: 10.0, moz:processID: 12956, moz:profile: C:\Users\azam_\AppData\Loca..., moz:shutdownTimeout: 60000, moz:webdriverClick: true, moz:windowless: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://127.0.0.1:12855/devtoo..., se:cdpVersion: 85.0, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify}
+Session ID: 0ebf21c0-3237-4554-9d72-2eec97e9869f
+	at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
+	at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:77)
+	at java.base/jdk.internal.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
+	at java.base/java.lang.reflect.Constructor.newInstanceWithCaller(Constructor.java:499)
+	at java.base/java.lang.reflect.Constructor.newInstance(Constructor.java:480)
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.createException(W3CHttpResponseCodec.java:200)
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:133)
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:52)
+	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:191)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.invokeExecute(DriverCommandExecutor.java:200)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:175)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:607)
+	at org.openqa.selenium.remote.ElementLocation$ElementFinder$2.findElement(ElementLocation.java:165)
+	at org.openqa.selenium.remote.ElementLocation.findElement(ElementLocation.java:59)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:364)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:358)
+	at pageObjects.ArrayPage.arrays_using_list(ArrayPage.java:160)
+	at stepDefinitions.ArraySteps.the_user_clicks_on_arrays_using_list_link(ArraySteps.java:45)
+	at ✽.The user clicks on Arrays Using List link(file:///C:/mizba/BitBuddies_DsAlgo/src/test/resources/features/05Array.feature:33)
+</pre></div></td>
+<td>3</td>
+<td>runner.TestRunner@38604b81</td></tr>
+<tr>
+<td title='runner.TestRunner.runScenario()'><b>runScenario</b><br>Test class: runner.TestRunner<br>Test method: Runs Cucumber Scenarios<br>Parameters: "Basic Operations In List", "Array feature"</td>
+<td><div><pre>org.openqa.selenium.NoSuchElementException: Unable to locate element: //*[@id=&quot;content&quot;]/li[3]/a
+For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors#no-such-element-exception
+Build info: version: &apos;4.15.0&apos;, revision: &apos;1d14b5521b&apos;
+System info: os.name: &apos;Windows 11&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;17.0.9&apos;
+Driver info: org.openqa.selenium.firefox.FirefoxDriver
+Command: [0ebf21c0-3237-4554-9d72-2eec97e9869f, findElement {using=xpath, value=//*[@id=&quot;content&quot;]/li[3]/a}]
+Capabilities {acceptInsecureCerts: true, browserName: firefox, browserVersion: 120.0.1, moz:accessibilityChecks: false, moz:buildID: 20231129155202, moz:debuggerAddress: 127.0.0.1:12855, moz:geckodriverVersion: 0.33.0, moz:headless: false, moz:platformVersion: 10.0, moz:processID: 12956, moz:profile: C:\Users\azam_\AppData\Loca..., moz:shutdownTimeout: 60000, moz:webdriverClick: true, moz:windowless: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://127.0.0.1:12855/devtoo..., se:cdpVersion: 85.0, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify}
+Session ID: 0ebf21c0-3237-4554-9d72-2eec97e9869f
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.createException(W3CHttpResponseCodec.java:200)
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:133)
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:52)
+	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:191)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.invokeExecute(DriverCommandExecutor.java:200)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:175)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:607)
+	at org.openqa.selenium.remote.ElementLocation$ElementFinder$2.findElement(ElementLocation.java:165)
+	at org.openqa.selenium.remote.ElementLocation.findElement(ElementLocation.java:59)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:364)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:358)
+	at pageObjects.ArrayPage.basic_operations(ArrayPage.java:166)
+	at stepDefinitions.ArraySteps.the_user_clicks_on_basic_operations_in_list_link(ArraySteps.java:60)
+	at ✽.The user clicks on Basic Operations In List link(file:///C:/mizba/BitBuddies_DsAlgo/src/test/resources/features/05Array.feature:47)
+... Removed 5 stack frames</pre></div><a href='#' onClick='toggleBox("stack-trace24333082", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace24333082'><pre>org.openqa.selenium.NoSuchElementException: Unable to locate element: //*[@id=&quot;content&quot;]/li[3]/a
+For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors#no-such-element-exception
+Build info: version: &apos;4.15.0&apos;, revision: &apos;1d14b5521b&apos;
+System info: os.name: &apos;Windows 11&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;17.0.9&apos;
+Driver info: org.openqa.selenium.firefox.FirefoxDriver
+Command: [0ebf21c0-3237-4554-9d72-2eec97e9869f, findElement {using=xpath, value=//*[@id=&quot;content&quot;]/li[3]/a}]
+Capabilities {acceptInsecureCerts: true, browserName: firefox, browserVersion: 120.0.1, moz:accessibilityChecks: false, moz:buildID: 20231129155202, moz:debuggerAddress: 127.0.0.1:12855, moz:geckodriverVersion: 0.33.0, moz:headless: false, moz:platformVersion: 10.0, moz:processID: 12956, moz:profile: C:\Users\azam_\AppData\Loca..., moz:shutdownTimeout: 60000, moz:webdriverClick: true, moz:windowless: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://127.0.0.1:12855/devtoo..., se:cdpVersion: 85.0, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify}
+Session ID: 0ebf21c0-3237-4554-9d72-2eec97e9869f
+	at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
+	at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:77)
+	at java.base/jdk.internal.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
+	at java.base/java.lang.reflect.Constructor.newInstanceWithCaller(Constructor.java:499)
+	at java.base/java.lang.reflect.Constructor.newInstance(Constructor.java:480)
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.createException(W3CHttpResponseCodec.java:200)
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:133)
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:52)
+	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:191)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.invokeExecute(DriverCommandExecutor.java:200)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:175)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:607)
+	at org.openqa.selenium.remote.ElementLocation$ElementFinder$2.findElement(ElementLocation.java:165)
+	at org.openqa.selenium.remote.ElementLocation.findElement(ElementLocation.java:59)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:364)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:358)
+	at pageObjects.ArrayPage.basic_operations(ArrayPage.java:166)
+	at stepDefinitions.ArraySteps.the_user_clicks_on_basic_operations_in_list_link(ArraySteps.java:60)
+	at ✽.The user clicks on Basic Operations In List link(file:///C:/mizba/BitBuddies_DsAlgo/src/test/resources/features/05Array.feature:47)
+</pre></div></td>
+<td>3</td>
+<td>runner.TestRunner@38604b81</td></tr>
+<tr>
+<td title='runner.TestRunner.runScenario()'><b>runScenario</b><br>Test class: runner.TestRunner<br>Test method: Runs Cucumber Scenarios<br>Parameters: "The user is logged in to DS Algo portal", "Testing data structure Module"</td>
+<td><div><pre>org.openqa.selenium.NoAlertPresentException: Build info: version: &apos;4.15.0&apos;, revision: &apos;1d14b5521b&apos;
+System info: os.name: &apos;Windows 11&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;17.0.9&apos;
+Driver info: org.openqa.selenium.firefox.FirefoxDriver
+Command: [0ebf21c0-3237-4554-9d72-2eec97e9869f, getAlertText {}]
+Capabilities {acceptInsecureCerts: true, browserName: firefox, browserVersion: 120.0.1, moz:accessibilityChecks: false, moz:buildID: 20231129155202, moz:debuggerAddress: 127.0.0.1:12855, moz:geckodriverVersion: 0.33.0, moz:headless: false, moz:platformVersion: 10.0, moz:processID: 12956, moz:profile: C:\Users\azam_\AppData\Loca..., moz:shutdownTimeout: 60000, moz:webdriverClick: true, moz:windowless: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://127.0.0.1:12855/devtoo..., se:cdpVersion: 85.0, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify}
+Session ID: 0ebf21c0-3237-4554-9d72-2eec97e9869f
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.createException(W3CHttpResponseCodec.java:200)
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:133)
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:52)
+	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:191)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.invokeExecute(DriverCommandExecutor.java:200)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:175)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:607)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:680)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:684)
+	at org.openqa.selenium.remote.RemoteWebDriver$RemoteTargetLocator.alert(RemoteWebDriver.java:1252)
+	at pageObjects.DataStrucPage.alert_wrongcode(DataStrucPage.java:110)
+	at stepDefinitions.DataStructureSteps.an_alert_message_should_be_displayed(DataStructureSteps.java:86)
+	at ✽.An alert message should be displayed(file:///C:/mizba/BitBuddies_DsAlgo/src/test/resources/features/04Datastructure.feature:20)
+... Removed 5 stack frames</pre></div><a href='#' onClick='toggleBox("stack-trace960858222", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace960858222'><pre>org.openqa.selenium.NoAlertPresentException: Build info: version: &apos;4.15.0&apos;, revision: &apos;1d14b5521b&apos;
+System info: os.name: &apos;Windows 11&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;17.0.9&apos;
+Driver info: org.openqa.selenium.firefox.FirefoxDriver
+Command: [0ebf21c0-3237-4554-9d72-2eec97e9869f, getAlertText {}]
+Capabilities {acceptInsecureCerts: true, browserName: firefox, browserVersion: 120.0.1, moz:accessibilityChecks: false, moz:buildID: 20231129155202, moz:debuggerAddress: 127.0.0.1:12855, moz:geckodriverVersion: 0.33.0, moz:headless: false, moz:platformVersion: 10.0, moz:processID: 12956, moz:profile: C:\Users\azam_\AppData\Loca..., moz:shutdownTimeout: 60000, moz:webdriverClick: true, moz:windowless: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://127.0.0.1:12855/devtoo..., se:cdpVersion: 85.0, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify}
+Session ID: 0ebf21c0-3237-4554-9d72-2eec97e9869f
+	at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
+	at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:77)
+	at java.base/jdk.internal.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
+	at java.base/java.lang.reflect.Constructor.newInstanceWithCaller(Constructor.java:499)
+	at java.base/java.lang.reflect.Constructor.newInstance(Constructor.java:480)
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.createException(W3CHttpResponseCodec.java:200)
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:133)
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:52)
+	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:191)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.invokeExecute(DriverCommandExecutor.java:200)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:175)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:607)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:680)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:684)
+	at org.openqa.selenium.remote.RemoteWebDriver$RemoteTargetLocator.alert(RemoteWebDriver.java:1252)
+	at pageObjects.DataStrucPage.alert_wrongcode(DataStrucPage.java:110)
+	at stepDefinitions.DataStructureSteps.an_alert_message_should_be_displayed(DataStructureSteps.java:86)
+	at ✽.An alert message should be displayed(file:///C:/mizba/BitBuddies_DsAlgo/src/test/resources/features/04Datastructure.feature:20)
+</pre></div></td>
+<td>3</td>
+<td>runner.TestRunner@38604b81</td></tr>
+<tr>
+<td title='runner.TestRunner.runScenario()'><b>runScenario</b><br>Test class: runner.TestRunner<br>Test method: Runs Cucumber Scenarios<br>Parameters: "Practice Questions to Search the Array link", "Array feature"</td>
+<td><div><pre>org.openqa.selenium.NoSuchElementException: Unable to locate element: //a[contains(text(),&apos;Practice Questions&apos;)]
+For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors#no-such-element-exception
+Build info: version: &apos;4.15.0&apos;, revision: &apos;1d14b5521b&apos;
+System info: os.name: &apos;Windows 11&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;17.0.9&apos;
+Driver info: org.openqa.selenium.firefox.FirefoxDriver
+Command: [0ebf21c0-3237-4554-9d72-2eec97e9869f, findElement {using=xpath, value=//a[contains(text(),&apos;Practice Questions&apos;)]}]
+Capabilities {acceptInsecureCerts: true, browserName: firefox, browserVersion: 120.0.1, moz:accessibilityChecks: false, moz:buildID: 20231129155202, moz:debuggerAddress: 127.0.0.1:12855, moz:geckodriverVersion: 0.33.0, moz:headless: false, moz:platformVersion: 10.0, moz:processID: 12956, moz:profile: C:\Users\azam_\AppData\Loca..., moz:shutdownTimeout: 60000, moz:webdriverClick: true, moz:windowless: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://127.0.0.1:12855/devtoo..., se:cdpVersion: 85.0, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify}
+Session ID: 0ebf21c0-3237-4554-9d72-2eec97e9869f
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.createException(W3CHttpResponseCodec.java:200)
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:133)
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:52)
+	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:191)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.invokeExecute(DriverCommandExecutor.java:200)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:175)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:607)
+	at org.openqa.selenium.remote.ElementLocation$ElementFinder$2.findElement(ElementLocation.java:165)
+	at org.openqa.selenium.remote.ElementLocation.findElement(ElementLocation.java:59)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:364)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:358)
+	at pageObjects.ArrayPage.practice_questions(ArrayPage.java:178)
+	at stepDefinitions.ArraySteps.the_user_clicks_on_practice_questions_link(ArraySteps.java:99)
+	at ✽.The user clicks on Practice Questions link(file:///C:/mizba/BitBuddies_DsAlgo/src/test/resources/features/05Array.feature:75)
+... Removed 5 stack frames</pre></div><a href='#' onClick='toggleBox("stack-trace595755231", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace595755231'><pre>org.openqa.selenium.NoSuchElementException: Unable to locate element: //a[contains(text(),&apos;Practice Questions&apos;)]
+For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors#no-such-element-exception
+Build info: version: &apos;4.15.0&apos;, revision: &apos;1d14b5521b&apos;
+System info: os.name: &apos;Windows 11&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;17.0.9&apos;
+Driver info: org.openqa.selenium.firefox.FirefoxDriver
+Command: [0ebf21c0-3237-4554-9d72-2eec97e9869f, findElement {using=xpath, value=//a[contains(text(),&apos;Practice Questions&apos;)]}]
+Capabilities {acceptInsecureCerts: true, browserName: firefox, browserVersion: 120.0.1, moz:accessibilityChecks: false, moz:buildID: 20231129155202, moz:debuggerAddress: 127.0.0.1:12855, moz:geckodriverVersion: 0.33.0, moz:headless: false, moz:platformVersion: 10.0, moz:processID: 12956, moz:profile: C:\Users\azam_\AppData\Loca..., moz:shutdownTimeout: 60000, moz:webdriverClick: true, moz:windowless: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://127.0.0.1:12855/devtoo..., se:cdpVersion: 85.0, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify}
+Session ID: 0ebf21c0-3237-4554-9d72-2eec97e9869f
+	at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
+	at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:77)
+	at java.base/jdk.internal.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
+	at java.base/java.lang.reflect.Constructor.newInstanceWithCaller(Constructor.java:499)
+	at java.base/java.lang.reflect.Constructor.newInstance(Constructor.java:480)
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.createException(W3CHttpResponseCodec.java:200)
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:133)
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:52)
+	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:191)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.invokeExecute(DriverCommandExecutor.java:200)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:175)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:607)
+	at org.openqa.selenium.remote.ElementLocation$ElementFinder$2.findElement(ElementLocation.java:165)
+	at org.openqa.selenium.remote.ElementLocation.findElement(ElementLocation.java:59)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:364)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:358)
+	at pageObjects.ArrayPage.practice_questions(ArrayPage.java:178)
+	at stepDefinitions.ArraySteps.the_user_clicks_on_practice_questions_link(ArraySteps.java:99)
+	at ✽.The user clicks on Practice Questions link(file:///C:/mizba/BitBuddies_DsAlgo/src/test/resources/features/05Array.feature:75)
+</pre></div></td>
+<td>3</td>
+<td>runner.TestRunner@38604b81</td></tr>
+<tr>
+<td title='runner.TestRunner.runScenario()'><b>runScenario</b><br>Test class: runner.TestRunner<br>Test method: Runs Cucumber Scenarios<br>Parameters: "The user is logged in to DS Algo portal", "Array feature"</td>
+<td><div><pre>org.openqa.selenium.NoSuchElementException: Unable to locate element: //*[@id=&apos;navbarCollapse&apos;]/div[2]/ul/a[3]
+For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors#no-such-element-exception
+Build info: version: &apos;4.15.0&apos;, revision: &apos;1d14b5521b&apos;
+System info: os.name: &apos;Windows 11&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;17.0.9&apos;
+Driver info: org.openqa.selenium.firefox.FirefoxDriver
+Command: [0ebf21c0-3237-4554-9d72-2eec97e9869f, findElement {using=xpath, value=//*[@id=&apos;navbarCollapse&apos;]/div[2]/ul/a[3]}]
+Capabilities {acceptInsecureCerts: true, browserName: firefox, browserVersion: 120.0.1, moz:accessibilityChecks: false, moz:buildID: 20231129155202, moz:debuggerAddress: 127.0.0.1:12855, moz:geckodriverVersion: 0.33.0, moz:headless: false, moz:platformVersion: 10.0, moz:processID: 12956, moz:profile: C:\Users\azam_\AppData\Loca..., moz:shutdownTimeout: 60000, moz:webdriverClick: true, moz:windowless: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://127.0.0.1:12855/devtoo..., se:cdpVersion: 85.0, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify}
+Session ID: 0ebf21c0-3237-4554-9d72-2eec97e9869f
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.createException(W3CHttpResponseCodec.java:200)
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:133)
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:52)
+	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:191)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.invokeExecute(DriverCommandExecutor.java:200)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:175)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:607)
+	at org.openqa.selenium.remote.ElementLocation$ElementFinder$2.findElement(ElementLocation.java:165)
+	at org.openqa.selenium.remote.ElementLocation.findElement(ElementLocation.java:59)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:364)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:358)
+	at pageObjects.DataStrucPage.signin_page(DataStrucPage.java:22)
+	at stepDefinitions.DataStructureSteps.the_user_is_on_signin_page_of_ds_algo_portal(DataStructureSteps.java:14)
+	at ✽.The user is on Signin page of DS Algo portal(file:///C:/mizba/BitBuddies_DsAlgo/src/test/resources/features/05Array.feature:4)
+... Removed 5 stack frames</pre></div><a href='#' onClick='toggleBox("stack-trace1786758337", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace1786758337'><pre>org.openqa.selenium.NoSuchElementException: Unable to locate element: //*[@id=&apos;navbarCollapse&apos;]/div[2]/ul/a[3]
+For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors#no-such-element-exception
+Build info: version: &apos;4.15.0&apos;, revision: &apos;1d14b5521b&apos;
+System info: os.name: &apos;Windows 11&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;17.0.9&apos;
+Driver info: org.openqa.selenium.firefox.FirefoxDriver
+Command: [0ebf21c0-3237-4554-9d72-2eec97e9869f, findElement {using=xpath, value=//*[@id=&apos;navbarCollapse&apos;]/div[2]/ul/a[3]}]
+Capabilities {acceptInsecureCerts: true, browserName: firefox, browserVersion: 120.0.1, moz:accessibilityChecks: false, moz:buildID: 20231129155202, moz:debuggerAddress: 127.0.0.1:12855, moz:geckodriverVersion: 0.33.0, moz:headless: false, moz:platformVersion: 10.0, moz:processID: 12956, moz:profile: C:\Users\azam_\AppData\Loca..., moz:shutdownTimeout: 60000, moz:webdriverClick: true, moz:windowless: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://127.0.0.1:12855/devtoo..., se:cdpVersion: 85.0, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify}
+Session ID: 0ebf21c0-3237-4554-9d72-2eec97e9869f
+	at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
+	at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:77)
+	at java.base/jdk.internal.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
+	at java.base/java.lang.reflect.Constructor.newInstanceWithCaller(Constructor.java:499)
+	at java.base/java.lang.reflect.Constructor.newInstance(Constructor.java:480)
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.createException(W3CHttpResponseCodec.java:200)
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:133)
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:52)
+	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:191)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.invokeExecute(DriverCommandExecutor.java:200)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:175)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:607)
+	at org.openqa.selenium.remote.ElementLocation$ElementFinder$2.findElement(ElementLocation.java:165)
+	at org.openqa.selenium.remote.ElementLocation.findElement(ElementLocation.java:59)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:364)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:358)
+	at pageObjects.DataStrucPage.signin_page(DataStrucPage.java:22)
+	at stepDefinitions.DataStructureSteps.the_user_is_on_signin_page_of_ds_algo_portal(DataStructureSteps.java:14)
+	at ✽.The user is on Signin page of DS Algo portal(file:///C:/mizba/BitBuddies_DsAlgo/src/test/resources/features/05Array.feature:4)
+</pre></div></td>
+<td>3</td>
+<td>runner.TestRunner@38604b81</td></tr>
+</table><p>
+<table width='100%' border='1' class='invocation-passed'>
+<tr><td colspan='4' align='center'><b>PASSED TESTS</b></td></tr>
+<tr><td><b>Test method</b></td>
+<td><b>Attribute(s)</b></td>
+<td width="30%"><b>Exception</b></td>
+<td width="10%"><b>Time (seconds)</b></td>
+<td><b>Instance</b></td>
+</tr>
+<tr>
+<td title='runner.TestRunner.runScenario()'><b>runScenario</b><br>Test class: runner.TestRunner<br>Test method: Runs Cucumber Scenarios<br>Parameters: "User on login page and login with invalid and valid inputs from Excel "Sheet1" and", "Validating Login page"</td>
+<td></td>
+<td>0</td>
+<td>runner.TestRunner@38604b81</td></tr>
+<tr>
+<td title='runner.TestRunner.runScenario()'><b>runScenario</b><br>Test class: runner.TestRunner<br>Test method: Runs Cucumber Scenarios<br>Parameters: "User on login page and login with invalid and valid inputs from Excel "Sheet1" and", "Validating Login page"</td>
+<td></td>
+<td>1</td>
+<td>runner.TestRunner@38604b81</td></tr>
+<tr>
+<td title='runner.TestRunner.runScenario()'><b>runScenario</b><br>Test class: runner.TestRunner<br>Test method: Runs Cucumber Scenarios<br>Parameters: "User is on Home page and click getstarted link "Queue" on home page without sign in", "User launch dsalgo application and test Home page"</td>
+<td></td>
+<td>0</td>
+<td>runner.TestRunner@38604b81</td></tr>
+<tr>
+<td title='runner.TestRunner.runScenario()'><b>runScenario</b><br>Test class: runner.TestRunner<br>Test method: Runs Cucumber Scenarios<br>Parameters: "User is on Home page and click on dropdown "Stack" without sign in", "User launch dsalgo application and test Home page"</td>
+<td></td>
+<td>0</td>
+<td>runner.TestRunner@38604b81</td></tr>
+<tr>
+<td title='runner.TestRunner.runScenario()'><b>runScenario</b><br>Test class: runner.TestRunner<br>Test method: Runs Cucumber Scenarios<br>Parameters: "Data structure", "Testing data structure Module"</td>
+<td></td>
+<td>0</td>
+<td>runner.TestRunner@38604b81</td></tr>
+<tr>
+<td title='runner.TestRunner.runScenario()'><b>runScenario</b><br>Test class: runner.TestRunner<br>Test method: Runs Cucumber Scenarios<br>Parameters: "User is on Home page and click getstarted link "Graph" on home page without sign in", "User launch dsalgo application and test Home page"</td>
+<td></td>
+<td>0</td>
+<td>runner.TestRunner@38604b81</td></tr>
+<tr>
+<td title='runner.TestRunner.runScenario()'><b>runScenario</b><br>Test class: runner.TestRunner<br>Test method: Runs Cucumber Scenarios<br>Parameters: "User on login page and login with invalid and valid inputs from Excel "Sheet1" and", "Validating Login page"</td>
+<td></td>
+<td>0</td>
+<td>runner.TestRunner@38604b81</td></tr>
+<tr>
+<td title='runner.TestRunner.runScenario()'><b>runScenario</b><br>Test class: runner.TestRunner<br>Test method: Runs Cucumber Scenarios<br>Parameters: "User launch home page of an dsalgo project", "User launch dsalgo application and test Home page"</td>
+<td></td>
+<td>1</td>
+<td>runner.TestRunner@38604b81</td></tr>
+<tr>
+<td title='runner.TestRunner.runScenario()'><b>runScenario</b><br>Test class: runner.TestRunner<br>Test method: Runs Cucumber Scenarios<br>Parameters: "User is on Home page and click on dropdown "Tree" without sign in", "User launch dsalgo application and test Home page"</td>
+<td></td>
+<td>0</td>
+<td>runner.TestRunner@38604b81</td></tr>
+<tr>
+<td title='runner.TestRunner.runScenario()'><b>runScenario</b><br>Test class: runner.TestRunner<br>Test method: Runs Cucumber Scenarios<br>Parameters: "User is on Home page and click on dropdown "Arrays" without sign in", "User launch dsalgo application and test Home page"</td>
+<td></td>
+<td>0</td>
+<td>runner.TestRunner@38604b81</td></tr>
+<tr>
+<td title='runner.TestRunner.runScenario()'><b>runScenario</b><br>Test class: runner.TestRunner<br>Test method: Runs Cucumber Scenarios<br>Parameters: "User is on Home page and click getstarted link "Datastructures" on home page without sign in", "User launch dsalgo application and test Home page"</td>
+<td></td>
+<td>0</td>
+<td>runner.TestRunner@38604b81</td></tr>
+<tr>
+<td title='runner.TestRunner.runScenario()'><b>runScenario</b><br>Test class: runner.TestRunner<br>Test method: Runs Cucumber Scenarios<br>Parameters: "user cliks register button with password less than eight character", "HerokuApp Testcases"</td>
+<td></td>
+<td>0</td>
+<td>runner.TestRunner@38604b81</td></tr>
+<tr>
+<td title='runner.TestRunner.runScenario()'><b>runScenario</b><br>Test class: runner.TestRunner<br>Test method: Runs Cucumber Scenarios<br>Parameters: "user enter username only", "HerokuApp Testcases"</td>
+<td></td>
+<td>0</td>
+<td>runner.TestRunner@38604b81</td></tr>
+<tr>
+<td title='runner.TestRunner.runScenario()'><b>runScenario</b><br>Test class: runner.TestRunner<br>Test method: Runs Cucumber Scenarios<br>Parameters: "User is on Home page and click getstarted link "Stack" on home page without sign in", "User launch dsalgo application and test Home page"</td>
+<td></td>
+<td>0</td>
+<td>runner.TestRunner@38604b81</td></tr>
+<tr>
+<td title='runner.TestRunner.runScenario()'><b>runScenario</b><br>Test class: runner.TestRunner<br>Test method: Runs Cucumber Scenarios<br>Parameters: "User is on Home page and click on dropdown "Queue" without sign in", "User launch dsalgo application and test Home page"</td>
+<td></td>
+<td>0</td>
+<td>runner.TestRunner@38604b81</td></tr>
+<tr>
+<td title='runner.TestRunner.runScenario()'><b>runScenario</b><br>Test class: runner.TestRunner<br>Test method: Runs Cucumber Scenarios<br>Parameters: "User is on Home page and click getstarted link "Linkedlist" on home page without sign in", "User launch dsalgo application and test Home page"</td>
+<td></td>
+<td>0</td>
+<td>runner.TestRunner@38604b81</td></tr>
+<tr>
+<td title='runner.TestRunner.runScenario()'><b>runScenario</b><br>Test class: runner.TestRunner<br>Test method: Runs Cucumber Scenarios<br>Parameters: "user send username and password only", "HerokuApp Testcases"</td>
+<td></td>
+<td>0</td>
+<td>runner.TestRunner@38604b81</td></tr>
+<tr>
+<td title='runner.TestRunner.runScenario()'><b>runScenario</b><br>Test class: runner.TestRunner<br>Test method: Runs Cucumber Scenarios<br>Parameters: "User is on Home page and click on dropdown "Graph" without sign in", "User launch dsalgo application and test Home page"</td>
+<td></td>
+<td>0</td>
+<td>runner.TestRunner@38604b81</td></tr>
+<tr>
+<td title='runner.TestRunner.runScenario()'><b>runScenario</b><br>Test class: runner.TestRunner<br>Test method: Runs Cucumber Scenarios<br>Parameters: "Find Numbers with Even Number of Digits page", "Array feature"</td>
+<td></td>
+<td>0</td>
+<td>runner.TestRunner@38604b81</td></tr>
+<tr>
+<td title='runner.TestRunner.runScenario()'><b>runScenario</b><br>Test class: runner.TestRunner<br>Test method: Runs Cucumber Scenarios<br>Parameters: "DS Algo Portal", "HerokuApp Testcases"</td>
+<td></td>
+<td>0</td>
+<td>runner.TestRunner@38604b81</td></tr>
+<tr>
+<td title='runner.TestRunner.runScenario()'><b>runScenario</b><br>Test class: runner.TestRunner<br>Test method: Runs Cucumber Scenarios<br>Parameters: "User is on Home page and click getstarted link "Tree" on home page without sign in", "User launch dsalgo application and test Home page"</td>
+<td></td>
+<td>0</td>
+<td>runner.TestRunner@38604b81</td></tr>
+<tr>
+<td title='runner.TestRunner.runScenario()'><b>runScenario</b><br>Test class: runner.TestRunner<br>Test method: Runs Cucumber Scenarios<br>Parameters: "User is on Home page and click on sign in", "User launch dsalgo application and test Home page"</td>
+<td></td>
+<td>0</td>
+<td>runner.TestRunner@38604b81</td></tr>
+<tr>
+<td title='runner.TestRunner.runScenario()'><b>runScenario</b><br>Test class: runner.TestRunner<br>Test method: Runs Cucumber Scenarios<br>Parameters: "Max Consecutive Ones page", "Array feature"</td>
+<td></td>
+<td>1</td>
+<td>runner.TestRunner@38604b81</td></tr>
+<tr>
+<td title='runner.TestRunner.runScenario()'><b>runScenario</b><br>Test class: runner.TestRunner<br>Test method: Runs Cucumber Scenarios<br>Parameters: "User on login page and login with invalid and valid inputs from Excel "Sheet1" and", "Validating Login page"</td>
+<td></td>
+<td>0</td>
+<td>runner.TestRunner@38604b81</td></tr>
+<tr>
+<td title='runner.TestRunner.runScenario()'><b>runScenario</b><br>Test class: runner.TestRunner<br>Test method: Runs Cucumber Scenarios<br>Parameters: "Squares of a Sorted Array page", "Array feature"</td>
+<td></td>
+<td>1</td>
+<td>runner.TestRunner@38604b81</td></tr>
+<tr>
+<td title='runner.TestRunner.runScenario()'><b>runScenario</b><br>Test class: runner.TestRunner<br>Test method: Runs Cucumber Scenarios<br>Parameters: "User is on Home page and click getstarted link "Arrays" on home page without sign in", "User launch dsalgo application and test Home page"</td>
+<td></td>
+<td>0</td>
+<td>runner.TestRunner@38604b81</td></tr>
+<tr>
+<td title='runner.TestRunner.runScenario()'><b>runScenario</b><br>Test class: runner.TestRunner<br>Test method: Runs Cucumber Scenarios<br>Parameters: "User is on Home page and click on Register", "User launch dsalgo application and test Home page"</td>
+<td></td>
+<td>0</td>
+<td>runner.TestRunner@38604b81</td></tr>
+<tr>
+<td title='runner.TestRunner.runScenario()'><b>runScenario</b><br>Test class: runner.TestRunner<br>Test method: Runs Cucumber Scenarios<br>Parameters: "user enter username and two different password", "HerokuApp Testcases"</td>
+<td></td>
+<td>0</td>
+<td>runner.TestRunner@38604b81</td></tr>
+<tr>
+<td title='runner.TestRunner.runScenario()'><b>runScenario</b><br>Test class: runner.TestRunner<br>Test method: Runs Cucumber Scenarios<br>Parameters: "User is on Home page and click on dropdown "Linkedlist" without sign in", "User launch dsalgo application and test Home page"</td>
+<td></td>
+<td>0</td>
+<td>runner.TestRunner@38604b81</td></tr>
+</table><p>
+</body>
+</html>
